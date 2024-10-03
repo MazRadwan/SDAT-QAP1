@@ -18,3 +18,5 @@
 20,JohnWick,Bill Jones,34957839,Warner,2,CHECKED_OUT,ELECTRONIC,Book
 22,Dairyqueen,C. Higgins,495723758,DQ publishing,2,AVAILABLE,PRINTED,Book
 23,Java is Fun,Dr Malik,9583275923475,Keyin,1,AVAILABLE,ELECTRONIC,Book
+24,The New Book of Tests,BillY Bob,05398573985,BiLL Books,2,AVAILABLE,ELECTRONIC,Book
+999,Test Book,Test Author,123456789,Test Publisher,1,AVAILABLE,PRINTED,Book
