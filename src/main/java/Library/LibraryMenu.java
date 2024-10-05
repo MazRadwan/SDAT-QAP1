@@ -213,6 +213,8 @@ public class LibraryMenu {
                     }
                     item.setNumberOfCopies(item.getNumberOfCopies());
                     library.saveItems();
+                    System.out.println("Changes saved to file.");
+                    library.savePatrons();
                     System.out.println("Item returned successfully.");
                 } else {
                     System.out.println("This item cannot be returned.");

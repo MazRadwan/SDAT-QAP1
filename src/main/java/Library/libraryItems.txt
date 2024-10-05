@@ -1,6 +1,6 @@
 1,JS Programming,Bill Withers,947935795394,Dexter,0,CHECKED_OUT,PRINTED,Book
 2,Data Destructors,Bob Jones,945739587,Pullman,1,AVAILABLE,ELECTRONIC,Book
-5,Operating Systems,Carol Author,4433221100,Publisher E,2,AVAILABLE,ELECTRONIC,Book
+5,Operating Systems,Carol Author,4433221100,Publisher E,3,AVAILABLE,ELECTRONIC,Book
 6,Network Security,David Author,5566778899,Publisher F,2,AVAILABLE,AUDIO,Book
 7,Machine Learning,Eve Author,9988776655,Publisher G,1,AVAILABLE,PRINTED,Book
 8,Artificial Intelligence,Frank Author,2233445566,Publisher H,2,OVERDUE,ELECTRONIC,Book
@@ -15,8 +15,7 @@
 17,Book of Birds,Steve Cheese,435894579,Pigeon,1,AVAILABLE,PRINTED,Book
 18,The Book,Oliver Tames,945734987,Penguin,2,AVAILABLE,PRINTED,Book
 19,bookj,Steve rogers,439p57234,pubs,2,AVAILABLE,PRINTED,Book
-20,JohnWick,Bill Jones,34957839,Warner,2,CHECKED_OUT,ELECTRONIC,Book
-22,Dairyqueen,C. Higgins,495723758,DQ publishing,2,AVAILABLE,PRINTED,Book
-23,Java is Fun,Dr Malik,9583275923475,Keyin,1,AVAILABLE,ELECTRONIC,Book
+20,JohnWick,Bill Jones,34957839,Warner,3,AVAILABLE,ELECTRONIC,Book
+22,Dairyqueen,C. Higgins,495723758,DQ publishing,1,AVAILABLE,PRINTED,Book
+23,Java is Fun,Dr Malik,9583275923475,Keyin,3,AVAILABLE,ELECTRONIC,Book
 24,The New Book of Tests,BillY Bob,05398573985,BiLL Books,2,AVAILABLE,ELECTRONIC,Book
-999,Test Book,Test Author,123456789,Test Publisher,1,AVAILABLE,PRINTED,Book
