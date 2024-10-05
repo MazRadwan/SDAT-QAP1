@@ -56,12 +56,32 @@ public class SearchLibraryTest {
         testPassed = true;
     }
 
+    @Test
+    public void testSearchLibraryItemByISBN() {
+        // Create a book that will be searched by ISBN
+        Book searchableBook = new Book("2003", "The Science Book", "Science Author", "555555555", "Science Publisher", 1, Status.AVAILABLE, BookType.PRINTED);
+
+        // Add the book to the library
+        library.addItem(searchableBook);
+
+        // Perform the search operation by ISBN
+        LibraryItem foundItem = library.searchItemByISBN("555555555");
+
+        // Verify that the book has been found
+        assertNotNull(foundItem, "The book should be found in the library by ISBN");
+        assertEquals("555555555", foundItem.getISBN(), "The found book's ISBN should match the search query");
+
+        // Mark test as passed
+        testPassed = true;
+    }
+
     @AfterEach
     public void tearDown() {
         if (testPassed) {
             // Clean up the test entries from the library
             library.removeItem("2001");
             library.removeItem("2002");
+            library.removeItem("2003");
         }
     }
 }
