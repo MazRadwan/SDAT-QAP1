@@ -37,11 +37,31 @@ public class SearchLibraryTest {
         testPassed = true;
     }
 
+    @Test
+    public void testSearchLibraryItemByAuthor() {
+        // Create a book that will be searched by author
+        Book searchableBook = new Book("2002", "The Mystery Novel", "Mystery Author", "123456789", "Mystery Publisher", 1, Status.AVAILABLE, BookType.PRINTED);
+
+        // Add the book to the library
+        library.addItem(searchableBook);
+
+        // Perform the search operation by author
+        LibraryItem foundItem = library.searchItemByAuthor("Mystery Author");
+
+        // Verify that the book has been found
+        assertNotNull(foundItem, "The book should be found in the library by author");
+        assertEquals("Mystery Author", foundItem.getAuthor(), "The found book's author should match the search query");
+
+        // Mark test as passed
+        testPassed = true;
+    }
+
     @AfterEach
     public void tearDown() {
         if (testPassed) {
             // Clean up the test entries from the library
             library.removeItem("2001");
+            library.removeItem("2002");
         }
     }
 }

@@ -153,4 +153,13 @@ public class Library {
         }
         return null; // Return null if no item matches the given title
     }
+    public LibraryItem searchItemByAuthor(String author) {
+        for (LibraryItem item : items) {
+            if (item.getAuthor().equalsIgnoreCase(author)) {
+                return item;
+            }
+        }
+        return null; // Return null if no item matches the given author
+    }
+
 }
