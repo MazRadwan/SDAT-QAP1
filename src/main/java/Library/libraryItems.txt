@@ -1,5 +1,5 @@
 1,JS Programming,Bill Withers,947935795394,Dexter,0,CHECKED_OUT,PRINTED,Book
-2,Data Destructors,Bob Jones,945739587,Pullman,1,AVAILABLE,ELECTRONIC,Book
+2,Data Destructors,Bill Jones,51049583048,Big Books,3,AVAILABLE,ELECTRONIC,Book
 5,Operating Systems,Carol Author,4433221100,Publisher E,3,AVAILABLE,ELECTRONIC,Book
 6,Network Security,David Author,5566778899,Publisher F,2,AVAILABLE,AUDIO,Book
 7,Machine Learning,Eve Author,9988776655,Publisher G,1,AVAILABLE,PRINTED,Book
