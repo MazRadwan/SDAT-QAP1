@@ -103,6 +103,38 @@ public class LibraryMenuTest {
         testPassed = true;
     }
 
+    @Test
+    public void testEditLibraryItem() {
+        // Create a book that will be added and then edited
+        Book editableBook = new Book("1002", "Original Title", "Original Author", "987654323", "Original Publisher", 1, Status.AVAILABLE, BookType.PRINTED);
+
+        // Add the book to the library
+        library.addItem(editableBook);
+
+        // Edit the book's details
+        editableBook.setTitle("Edited Title");
+        editableBook.setAuthor("Edited Author");
+        editableBook.setPublisher("Edited Publisher");
+        editableBook.setISBN("111111111");
+        editableBook.setNumberOfCopies(2);
+
+        // Save the changes to the library
+        library.saveItems();
+
+        // Retrieve the updated book from the library
+        Book updatedBook = (Book) library.findItemById("1002");
+
+        // Verify that the book's details have been updated
+        assertEquals("Edited Title", updatedBook.getTitle(), "The book's title should be updated.");
+        assertEquals("Edited Author", updatedBook.getAuthor(), "The book's author should be updated.");
+        assertEquals("Edited Publisher", updatedBook.getPublisher(), "The book's publisher should be updated.");
+        assertEquals("111111111", updatedBook.getISBN(), "The book's ISBN should be updated.");
+        assertEquals(2, updatedBook.getNumberOfCopies(), "The book's number of copies should be updated.");
+
+        // Mark test as passed
+        testPassed = true;
+    }
+
     @AfterEach
     public void tearDown() {
         if (testPassed) {
@@ -111,6 +143,7 @@ public class LibraryMenuTest {
             library.removeItem("9999");
             library.removeItem("1000");
             library.removeItem("1001");
+            library.removeItem("1002");
             library.removePatron(testPatron.getName());
         }
     }
