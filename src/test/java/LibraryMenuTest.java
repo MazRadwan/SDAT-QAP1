@@ -61,12 +61,34 @@ public class LibraryMenuTest {
         testPassed = true;
     }
 
+    @Test
+    public void testBorrowLibraryItem() {
+        // Create a book that will be borrowed
+        Book availableBook = new Book("1000", "Borrowable Book", "Test Author", "987654321", "Test Publisher", 1, Status.AVAILABLE, BookType.PRINTED);
+
+        // Add the book to the library
+        library.addItem(availableBook);
+
+        // Perform the borrow operation
+        library.borrowItem(testPatron.getName(), "1000");
+
+        // Check that the book is now marked as CHECKED_OUT
+        assertEquals(Status.CHECKED_OUT, availableBook.getStatus(), "The book should be checked out after being borrowed.");
+
+        // Check that the patron's list of borrowed items includes the book
+        assertTrue(testPatron.getBorrowedItems().contains(availableBook), "The patron should have the borrowed book in their list of borrowed items.");
+
+        // Mark test as passed
+        testPassed = true;
+    }
+
     @AfterEach
     public void tearDown() {
         if (testPassed) {
             // Clean up the test entries from the library
             library.removeItem("999");
             library.removeItem("9999");
+            library.removeItem("1000");
             library.removePatron(testPatron.getName());
         }
     }
