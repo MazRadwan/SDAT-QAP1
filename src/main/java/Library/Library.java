@@ -161,5 +161,13 @@ public class Library {
         }
         return null; // Return null if no item matches the given author
     }
+    public LibraryItem searchItemByISBN(String isbn) {
+        for (LibraryItem item : items) {
+            if (item.getISBN().equalsIgnoreCase(isbn)) {
+                return item;
+            }
+        }
+        return null; // Return null if no item matches the given ISBN
+    }
 
 }
