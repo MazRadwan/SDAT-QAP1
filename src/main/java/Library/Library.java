@@ -145,4 +145,12 @@ public class Library {
         }
         return results;
     }
+    public LibraryItem searchItemByTitle(String title) {
+        for (LibraryItem item : items) {
+            if (item.getTitle().equalsIgnoreCase(title)) {
+                return item;
+            }
+        }
+        return null; // Return null if no item matches the given title
+    }
 }
