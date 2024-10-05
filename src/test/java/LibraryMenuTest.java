@@ -82,6 +82,27 @@ public class LibraryMenuTest {
         testPassed = true;
     }
 
+    @Test
+    public void testRemoveLibraryItem() {
+        // Create a book that will be added and then removed
+        Book removableBook = new Book("1001", "Removable Book", "Test Author", "987654322", "Test Publisher", 1, Status.AVAILABLE, BookType.PRINTED);
+
+        // Add the book to the library
+        library.addItem(removableBook);
+
+        // Verify that the book has been added
+        assertTrue(library.getItems().contains(removableBook), "The book should be added to the library");
+
+        // Remove the book from the library
+        library.removeItem("1001");
+
+        // Verify that the book has been removed
+        assertFalse(library.getItems().contains(removableBook), "The book should be removed from the library");
+
+        // Mark test as passed
+        testPassed = true;
+    }
+
     @AfterEach
     public void tearDown() {
         if (testPassed) {
@@ -89,6 +110,7 @@ public class LibraryMenuTest {
             library.removeItem("999");
             library.removeItem("9999");
             library.removeItem("1000");
+            library.removeItem("1001");
             library.removePatron(testPatron.getName());
         }
     }
