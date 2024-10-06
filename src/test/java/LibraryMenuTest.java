@@ -39,7 +39,7 @@ public class LibraryMenuTest {
         // Verify that the book has been added
         assertTrue(library.getItems().contains(newBook), "The book should be added to the library");
 
-        // Mark test as passed
+
         testPassed = true;
     }
 
@@ -57,7 +57,7 @@ public class LibraryMenuTest {
         // Check that the book is now marked as AVAILABLE
         assertEquals(Status.AVAILABLE, borrowedBook.getStatus(), "The book should be available after being returned.");
 
-        // Mark test as passed
+
         testPassed = true;
     }
 
@@ -78,7 +78,7 @@ public class LibraryMenuTest {
         // Check that the patron's list of borrowed items includes the book
         assertTrue(testPatron.getBorrowedItems().contains(availableBook), "The patron should have the borrowed book in their list of borrowed items.");
 
-        // Mark test as passed
+
         testPassed = true;
     }
 
@@ -99,7 +99,7 @@ public class LibraryMenuTest {
         // Verify that the book has been removed
         assertFalse(library.getItems().contains(removableBook), "The book should be removed from the library");
 
-        // Mark test as passed
+
         testPassed = true;
     }
 
@@ -131,7 +131,7 @@ public class LibraryMenuTest {
         assertEquals("111111111", updatedBook.getISBN(), "The book's ISBN should be updated.");
         assertEquals(2, updatedBook.getNumberOfCopies(), "The book's number of copies should be updated.");
 
-        // Mark test as passed
+
         testPassed = true;
     }
 

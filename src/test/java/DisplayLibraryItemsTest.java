@@ -42,7 +42,7 @@ public class DisplayLibraryItemsTest {
         assertTrue(items.contains(book1), "The library should contain the first book");
         assertTrue(items.contains(book2), "The library should contain the second book");
 
-        // Mark test as passed
+
         testPassed = true;
     }
 
