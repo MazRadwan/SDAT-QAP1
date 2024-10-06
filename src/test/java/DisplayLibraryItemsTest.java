@@ -16,7 +16,7 @@ public class DisplayLibraryItemsTest {
     @BeforeEach
     public void setUp() {
         library = new Library();
-        testPassed = false;  // Initialize as false, will be set to true only if test passes
+        testPassed = false;  // initialize as false, will be set to true only if test passes
     }
 
     @Test
