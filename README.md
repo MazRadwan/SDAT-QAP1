@@ -12,7 +12,7 @@
 
 - Create a simple Java program that is designed in a Object Orientated Way.
 - Write at least 3-unit test for your code with a mix of assertions.
-- mplement GitHub Actions to run tests on your repository.
+- implement GitHub Actions to run tests on your repository.
 
 Pass Outstanding requirements:
 - Have outstanding test coverage with more than the required amount of unit test.
